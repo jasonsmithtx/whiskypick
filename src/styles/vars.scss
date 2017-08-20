@@ -1,0 +1,40 @@
+/* fonts -------------- */
+$fontHeadings: 'Montserrat', 'Arial Black', Helvetica, sans-serif;
+$fontBody: 'Roboto', Helvetica, Arial, sans-serif;
+
+
+/* colors -------------- */
+$colorWhite: #fcfcfc;
+$colorBlack: #202020;
+
+$colorGray: #bbbbbb;
+$colorGrayLight: #f2f2f2;
+$colorGrayDark: #545456;
+
+$colorPrimary: #ffbe00;
+$colorPrimaryLight: #fff04e;
+$colorPrimaryDark: #edae00;
+
+/* animations -------------- */
+@keyframes spinLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animateContentUp {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@mixin animation($animation, $iterationCount, $duration) {
+  animation-name: $animation;
+  animation-iteration-count: $iterationCount;
+  animation-timing-function: ease-out;
+  animation-duration: $duration;
+}

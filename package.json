@@ -1,0 +1,36 @@
+{
+  "name": "whiskypick",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://kevinnayar.github.io/whiskypick",
+  "devDependencies": {
+    "chart.js": "^2.6.0",
+    "node-sass-chokidar": "0.0.2",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "^1.0.7"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "deep-freeze": "0.0.1",
+    "gh-pages": "^1.0.0",
+    "lodash": "^4.17.4",
+    "react": "^15.6.0",
+    "react-chartjs2": "^1.1.2",
+    "react-dom": "^15.6.0",
+    "react-rangeslider": "^2.1.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-promise": "^0.5.3"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
