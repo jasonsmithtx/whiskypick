@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { closeModal } from '../actions/index'
+import Chart from '../components/Chart'
 
 class Modal extends Component {
   handleKeyDown(event) {
@@ -75,7 +76,10 @@ class Modal extends Component {
             </div>
 
             <div className="modal-content">
-
+              <Chart
+                id="modal"
+                ratings={whisky.ratings}
+              />
             </div>
 
             <div className="modal-footer">

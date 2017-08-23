@@ -82,7 +82,7 @@ class Whiskies extends Component {
             </div>
             <div className="attribute">
               <i className="attribute-key material-icons">watch_later</i>
-              <p className="attribute-value">{whisky.age} years</p>
+              { (whisky.age === 0) ? <p className="attribute-value">NAS</p> : <p className="attribute-value">{whisky.age} years</p> }
             </div>
             <div className="attribute">
               <i className="attribute-key material-icons">monetization_on</i>

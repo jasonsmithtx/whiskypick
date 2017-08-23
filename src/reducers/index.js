@@ -14,16 +14,7 @@ export default function(state = initialState, action) {
   switch (action.type) {
 
     case types.FETCH_WHISKIES: {
-      const whiskies = [ ...action.payload.data.whiskeys ]
-
-      whiskies.forEach(whisky => {
-        const ratingsArray = whisky.ratings.reduce((ratings, rating) => {
-          ratings.push(rating.score)
-          return ratings;
-        }, [])
-
-        whisky.average_rating = _.mean(ratingsArray).toFixed(0)
-      })
+      const whiskies = [ ...action.payload.data.data ]
 
       return deepFreeze({
         ...state,
@@ -32,7 +23,7 @@ export default function(state = initialState, action) {
     }
 
     case types.FETCH_FILTERS: {
-      const filters = [ ...action.payload.data.filters ]
+      const filters = [ ...action.payload.data.data ]
 
       return deepFreeze({
         ...state,
@@ -41,7 +32,7 @@ export default function(state = initialState, action) {
     }
 
     case types.FETCH_PROFILES: {
-      const profiles = [ ...action.payload.data.profiles ]
+      const profiles = [ ...action.payload.data.data ]
 
       return deepFreeze({
         ...state,
@@ -50,7 +41,7 @@ export default function(state = initialState, action) {
     }
 
     case types.FETCH_SORTERS: {
-      const sorters = [ ...action.payload.data.sorters ]
+      const sorters = [ ...action.payload.data.data ]
 
       return deepFreeze({
         ...state,

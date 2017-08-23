@@ -15,6 +15,7 @@
     "gh-pages": "^1.0.0",
     "lodash": "^4.17.4",
     "react": "^15.6.0",
+    "react-chartjs-2": "^2.6.1",
     "react-chartjs2": "^1.1.2",
     "react-dom": "^15.6.0",
     "react-rangeslider": "^2.1.0",

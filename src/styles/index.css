@@ -364,7 +364,7 @@ body {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          margin-bottom: 0.25em;
+          margin-bottom: 0.5em;
           font-weight: bold; }
         .app-modal .modal .modal-overlay .modal-dialog .modal-header .title .name {
           font-size: 2em;
@@ -372,16 +372,18 @@ body {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          margin-bottom: 0.2em; }
+          margin-bottom: 0.5em; }
         .app-modal .modal .modal-overlay .modal-dialog .modal-header .title .description {
+          font-size: 1.4em;
           font-style: italic;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
       .app-modal .modal .modal-overlay .modal-dialog .modal-content {
-        width: calc(100% - 550px);
-        padding: 0 25px 25px;
-        float: right; }
+        width: calc(100% - 555px);
+        padding: 25px;
+        float: right;
+        position: relative; }
       .app-modal .modal .modal-overlay .modal-dialog .modal-footer {
         clear: both;
         overflow: hidden;
@@ -418,3 +420,113 @@ body {
               font-size: 1.6em;
               line-height: 40px;
               float: left; }
+
+/* media queries
+-------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  .app-header {
+    text-align: left;
+    padding: 20px 0;
+    width: 100%;
+    height: 24px;
+    background: #fcfcfc;
+    z-index: 1;
+    position: fixed; }
+    .app-header .title {
+      font-size: 2.4em;
+      height: 24px;
+      line-height: 24px;
+      margin-left: 80px;
+      color: #545456; }
+  .app-content {
+    margin: 64px 3.2% 0; }
+    .app-content .content .whisky {
+      background: #f2f2f2;
+      width: 96%; }
+      .app-content .content .whisky .title .brand {
+        font-size: 2.4em;
+        line-height: 30px;
+        height: 30px; }
+      .app-content .content .whisky .title .name {
+        font-size: 1.8em;
+        line-height: 24px; }
+      .app-content .content .whisky .details .rating,
+      .app-content .content .whisky .details .link {
+        height: 60px;
+        line-height: 60px; }
+      .app-content .content .whisky .attributes {
+        padding: 3%;
+        width: 94%; }
+        .app-content .content .whisky .attributes .attribute {
+          width: auto;
+          margin-right: 20px; }
+          .app-content .content .whisky .attributes .attribute .attribute-key {
+            font-size: 14px;
+            line-height: 20px; }
+          .app-content .content .whisky .attributes .attribute .attribute-value {
+            font-size: 1em;
+            line-height: 20px; }
+  .app-navigation .navigation-trigger {
+    left: 24px;
+    top: 16px; }
+    .app-navigation .navigation-trigger:hover {
+      opacity: 1; }
+  .app-navigation .navigation-hidden .navigation-content {
+    margin-top: -768px;
+    transition: all 0.35s ease-in-out; }
+  .app-navigation .navigation-visible .navigation-content {
+    transition: all 0.35s ease-in-out; }
+  .app-navigation .navigation-content {
+    height: 718px;
+    padding: 25px 5%; }
+    .app-navigation .navigation-content .navigation-list,
+    .app-navigation .navigation-content .navigation-sorters-list {
+      width: 90%;
+      float: left;
+      margin: 0 5% 9%; }
+      .app-navigation .navigation-content .navigation-list .title,
+      .app-navigation .navigation-content .navigation-sorters-list .title {
+        margin-bottom: .8em; }
+    .app-navigation .navigation-content .navigation-list .navigation-list-item {
+      width: 48%; }
+      .app-navigation .navigation-content .navigation-list .navigation-list-item:hover {
+        opacity: 1; }
+    .app-navigation .navigation-content .navigation-sorters-list .navigation-sorters-trigger {
+      top: 43px; }
+      .app-navigation .navigation-content .navigation-sorters-list .navigation-sorters-trigger:hover {
+        opacity: 1; }
+    .app-navigation .navigation-content .navigation-sorters-list .navigation-sorters .navigation-sorter:hover {
+      opacity: 1; }
+  .app-modal .modal .modal-overlay .modal-dialog {
+    height: 500px;
+    margin-top: -250px;
+    text-align: center; }
+    .app-modal .modal .modal-overlay .modal-dialog .image {
+      width: 150px;
+      height: 150px;
+      margin: 15px auto;
+      float: none;
+      border-radius: 75px; }
+    .app-modal .modal .modal-overlay .modal-dialog .modal-header .modal-close-trigger {
+      right: 15px;
+      top: 15px;
+      font-size: 30px; }
+    .app-modal .modal .modal-overlay .modal-dialog .modal-header .title {
+      width: 90%;
+      padding: 0 5%;
+      float: none; }
+      .app-modal .modal .modal-overlay .modal-dialog .modal-header .title .brand {
+        font-size: 2.4em;
+        line-height: 30px;
+        height: 30px; }
+      .app-modal .modal .modal-overlay .modal-dialog .modal-header .title .name {
+        font-size: 1.8em;
+        line-height: 24px; }
+      .app-modal .modal .modal-overlay .modal-dialog .modal-header .title .description {
+        display: none; }
+    .app-modal .modal .modal-overlay .modal-dialog .modal-content {
+      width: 90%;
+      float: none;
+      padding: 0px 5%; }
+    .app-modal .modal .modal-overlay .modal-dialog .modal-footer {
+      display: none; } }
