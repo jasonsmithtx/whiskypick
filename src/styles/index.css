@@ -198,6 +198,11 @@ body {
   overflow: hidden; }
   .app-content .content {
     overflow: hidden; }
+    .app-content .content .no-whisky .error {
+      font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
+      color: #202020;
+      font-size: 3em;
+      font-weight: bold; }
     .app-content .content .whisky {
       background: #f2f2f2;
       width: 29.33%;

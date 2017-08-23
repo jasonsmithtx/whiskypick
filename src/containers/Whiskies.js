@@ -39,8 +39,7 @@ class Whiskies extends Component {
     if (whiskies.length === 0) {
       return (
         <div className="no-whisky">
-          <h2>Looks like you ain't got no whisky! :(</h2>
-          <p>Try updating your filters.</p>
+          <p className="error">Looks like you ain&#39;t got no whisky! Try updating your filters.</p>
         </div>
       )
     }

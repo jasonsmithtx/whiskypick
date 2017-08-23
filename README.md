@@ -1,23 +1,23 @@
 # whiskypick.com
-The website displays ratings and tasting notes collected over a few years from my monthly whiskey meet up in Austin, Texas. We sample two bottles of a different type of whisky each month, curated by yours truly.
+A website that displays ratings and tasting notes collected over the past few years from my monthly whisky meet up in Austin, Texas. We sample two bottles of a different category of whisky each month, curated by yours truly.
 
-Check out the [**website**](https://whiskypick.com). You can filter whiskeys by...
+Check out the [**website**](https://kevinnayar.github.io/whiskypick). You can filter whiskeys by...
 
 **Whiskey Types**
 * Bourbon
 * Irish
-* Japanese
 * Rye
 * Scotch
-* Etc.
+* Whisky
 
 **Taste Profiles**
 * Floral
 * Fruity
+* Honey
 * Malty
 * Nutty
 * Smokey
-* Etc.
+* Spicy
+* Sweet
 
-
-_Built by [Kevin Nayar](https://kevinnayar.github.io/) using [React](https://facebook.github.io/react/), [Create React App](https://github.com/facebookincubator/create-react-app), and [Github Pages](https://pages.github.com/)_
+_Built by [Kevin Nayar](https://kevinnayar.github.io/) using [React](https://facebook.github.io/react/) & [Redux](http://redux.js.org/)

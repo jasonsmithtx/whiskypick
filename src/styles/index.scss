@@ -219,6 +219,15 @@ body {
   .content {
     overflow: hidden;
 
+    .no-whisky {
+      .error {
+        font-family: $fontHeadings;
+        color: $colorBlack;
+        font-size: 3em;
+        font-weight: bold;
+      }
+    }
+
     .whisky {
       background: $colorGrayLight;
       width: 29.33%;
