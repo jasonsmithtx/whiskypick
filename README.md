@@ -20,4 +20,4 @@ Check out the [**website**](https://kevinnayar.github.io/whiskypick). You can fi
 * Spicy
 * Sweet
 
-_Built by [Kevin Nayar](https://kevinnayar.github.io/) using [React](https://facebook.github.io/react/) & [Redux](http://redux.js.org/)
+_Built by [Kevin Nayar](https://kevinnayar.github.io/) using [React](https://facebook.github.io/react/) & [Redux](http://redux.js.org/)_
