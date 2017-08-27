@@ -1,1 +1,1 @@
-web: bin/boot/client
+web: bin/boot/
