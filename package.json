@@ -2,7 +2,7 @@
   "name": "whiskypick",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://kevinnayar.github.io/whiskypick",
+  
   "devDependencies": {
     "chart.js": "^2.6.0",
     "node-sass-chokidar": "0.0.2",
@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "deep-freeze": "0.0.1",
-    "gh-pages": "^1.0.0",
+
     "lodash": "^4.17.4",
     "react": "^15.6.0",
     "react-chartjs-2": "^2.6.1",
@@ -27,6 +27,7 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
+
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
