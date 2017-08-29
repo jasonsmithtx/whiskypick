@@ -72,7 +72,7 @@ body {
   }
   .navigation-hidden {
     .navigation-content {
-      margin-top: -300px;
+      margin-top: -400px;
       transition: all 0.15s ease-in-out;
     }
   }
@@ -240,7 +240,6 @@ body {
         width: 38%;
         float: left;
         background: $colorBlack;
-        filter: grayscale(100%);
         opacity: 0.9;
         transition: all .25s ease-in-out;
       }
@@ -345,7 +344,6 @@ body {
         }
 
         .image {
-          filter: grayscale(0%);
           opacity: 1;
           transition: all .25s ease-in-out;
         }
@@ -674,6 +672,7 @@ body {
                 font-size: 2.4em;
                 line-height: 30px;
                 height: 30px;
+                margin-bottom: 0.25em;
               }
               .name {
                 font-size: 1.8em;
@@ -690,7 +689,22 @@ body {
             padding: 0px 5%;
           }
           .modal-footer {
-            display: none;
+            .rating {
+              position: absolute;
+              left: 53px;
+              top: 50px;
+              width: 80px;
+              height: 80px;
+              font-size: 3em;
+              line-height: 80px;
+              border-radius: 40px;
+              background: $colorPrimary;
+              border-right: 2px solid $colorPrimaryDark;
+              border-bottom: 2px solid $colorPrimaryDark;
+            }
+            .attributes {
+              display: none;
+            }
           }
         }
       }
