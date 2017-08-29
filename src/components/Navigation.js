@@ -22,6 +22,7 @@ export default class Navigation extends Component {
               this.setState({
                 navigationVisible: !this.state.navigationVisible
               })
+              window.scrollTo(0, 0)
             }}>
             close
           </i>

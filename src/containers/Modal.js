@@ -44,7 +44,7 @@ class Modal extends Component {
             if (event.target.classList.contains('modal-overlay')) this.props.closeModal()
           }}>
 
-          <div className="modal-test">
+{/*          <div className="modal-test">
             <div
               className="modal-test-next"
               onClick={() => {
@@ -53,6 +53,7 @@ class Modal extends Component {
               NEXT
             </div>
           </div>
+*/}
 
           <div className="modal-dialog">
             <img
