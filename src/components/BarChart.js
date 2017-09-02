@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Bar, defaults } from 'react-chartjs-2'
 
-export default class Chart extends Component {
+export default class BarChart extends Component {
   render () {
     const { id, ratings } = this.props
 

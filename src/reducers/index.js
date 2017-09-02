@@ -49,6 +49,15 @@ export default function(state = initialState, action) {
       })
     }
 
+    case types.FETCH_USERS: {
+      const users = [ ...action.payload.data.data ]
+
+      return deepFreeze({
+        ...state,
+        users,
+      })
+    }
+
     case types.UPDATE_ACTIVE_FILTERS: {
       const filter = action.payload
       let activeFilters = [ ...state.activeFilters ]

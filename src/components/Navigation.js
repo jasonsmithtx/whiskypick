@@ -12,6 +12,19 @@ export default class Navigation extends Component {
     }
   }
 
+  handleKeyDown(event) {
+    if (event.keyCode === 27) {
+      this.setState({
+        navigationVisible: !this.state.navigationVisible
+      })
+      window.scrollTo(0, 0)
+    }
+  }
+
+  componentWillMount(){
+    document.addEventListener('keydown', this.handleKeyDown.bind(this))
+  }
+
   render() {
     return (
       <div className={`navigation ${(this.state.navigationVisible) ? 'navigation-visible' : 'navigation-hidden'}`}>

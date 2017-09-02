@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { closeModal } from '../actions/index'
-import Chart from '../components/Chart'
+import BarChart from '../components/BarChart'
 
 class Modal extends Component {
   handleKeyDown(event) {
@@ -10,19 +10,6 @@ class Modal extends Component {
 
   componentWillMount(){
     document.addEventListener('keydown', this.handleKeyDown.bind(this))
-  }
-
-  showNextWhisky(whisky) {
-    console.log(this.props.whiskies)
-    let nextWhisky
-
-    for (let i = 0; i < this.props.whiskies.length; i++) {
-      if (whisky.image_url === this.props.whiskies[i].image_url) {
-        nextWhisky = this.props.whiskies[i + 1]
-      }
-    }
-
-    console.log(nextWhisky)
   }
 
   render() {
@@ -43,17 +30,6 @@ class Modal extends Component {
           onClick={(event) => {
             if (event.target.classList.contains('modal-overlay')) this.props.closeModal()
           }}>
-
-{/*          <div className="modal-test">
-            <div
-              className="modal-test-next"
-              onClick={() => {
-                this.showNextWhisky(whisky)
-              }}>
-              NEXT
-            </div>
-          </div>
-*/}
 
           <div className="modal-dialog">
             <img
@@ -77,7 +53,7 @@ class Modal extends Component {
             </div>
 
             <div className="modal-content">
-              <Chart
+              <BarChart
                 id="modal"
                 ratings={whisky.ratings}
               />
