@@ -9,22 +9,19 @@ class Filters extends Component {
   }
 
   render() {
-    if (!this.props.filters) {
-      return (
-        <div className="navigation-list filters">
-          <p>Loading whisky types...</p>
-        </div>
-      )
-    }
-
     return (
-      <CheckBoxes
-        title="Whisky Types"
-        id="filters"
-        elements={this.props.filters}
-        activeElements={this.props.activeFilters}
-        onClick={(filter) => this.props.updateActiveFilters(filter)}
-      />
+      <div className="navigation-list filters">
+        {(this.props.filters) ? (
+          <CheckBoxes
+            title="Whisky Types"
+            elements={this.props.filters}
+            activeElements={this.props.activeFilters}
+            onClick={(filter) => this.props.updateActiveFilters(filter)}
+          />
+        ) : (
+          <p>Loading whisky types...</p>
+        )}
+      </div>
     )
   }
 }

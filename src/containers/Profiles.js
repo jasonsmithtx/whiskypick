@@ -9,22 +9,19 @@ class Profiles extends Component {
   }
 
   render() {
-    if (!this.props.profiles) {
-      return (
-        <div className="navigation-list profiles">
-          <p>Loading taste profiles...</p>
-        </div>
-      )
-    }
-
     return (
-      <CheckBoxes
-        title="Taste Profiles"
-        id="profiles"
-        elements={this.props.profiles}
-        activeElements={this.props.activeProfiles}
-        onClick={(profile) => this.props.updateActiveProfiles(profile)}
-      />
+      <div className="navigation-list profiles">
+        {(this.props.profiles) ? (
+          <CheckBoxes
+            title="Taste Profiles"
+            elements={this.props.profiles}
+            activeElements={this.props.activeProfiles}
+            onClick={(profile) => this.props.updateActiveProfiles(profile)}
+          />
+        ) : (
+          <p>Loading taste profiles...</p>
+        )}
+      </div>
     )
   }
 }

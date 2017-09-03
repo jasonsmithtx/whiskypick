@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 
 export default class CheckBoxes extends Component {
   render () {
-    const { title, id, elements, activeElements, onClick } = this.props
+    const { title, elements, activeElements, onClick } = this.props
 
     return (
-      <div className={`navigation-list ${id}`}>
+      <div className="navigation-list-column">
         <h3 className="title">{title}</h3>
         {elements.map(element => {
           if (activeElements.includes(element)) {

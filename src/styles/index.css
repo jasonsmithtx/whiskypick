@@ -193,7 +193,7 @@ body {
 
 /* app-content -------------- */
 .app-content {
-  margin: 300px 3.2% 0;
+  margin: 300px 3.2% 48px;
   width: 93.6%;
   overflow: hidden; }
   .app-content .content {
@@ -295,6 +295,25 @@ body {
         .app-content .content .whisky:hover .image {
           opacity: 1;
           transition: all .25s ease-in-out; }
+  .app-content .ugc .ugc-item {
+    width: 23%;
+    height: 23%;
+    min-height: 360px;
+    margin: 1%;
+    float: left;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    transition: all 0.25s linear; }
+    .app-content .ugc .ugc-item:hover {
+      opacity: 0.9; }
+    .app-content .ugc .ugc-item .user {
+      position: absolute;
+      left: 5%;
+      bottom: 5%;
+      font-size: 2em;
+      text-shadow: 0 0 10px rgba(32, 32, 32, 0.8); }
 
 /* app-footer -------------- */
 .app-footer {

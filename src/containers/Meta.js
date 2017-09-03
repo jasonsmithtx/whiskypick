@@ -17,7 +17,7 @@ class Meta extends Component {
           graphData={this.props.whiskies}
         />
       </div>
-    )
+    )    
   }
 }
 

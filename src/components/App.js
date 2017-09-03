@@ -6,6 +6,8 @@ import Whiskies from '../containers/Whiskies'
 import Navigation from '../components/Navigation'
 import Modal from '../containers/Modal'
 import Users from '../containers/Users'
+import Ugc from '../containers/Ugc'
+import User from '../containers/User'
 
 export default class App extends Component {
   render() {
@@ -15,8 +17,9 @@ export default class App extends Component {
             <div className="app-header">
               <Header />
             </div>
+
             <Route path="/" exact={true} render={() => (
-              <div className="app-view-home">
+              <div className="app-view app-view-home">
                 <div className="app-navigation">
                   <Navigation />
                 </div>
@@ -28,13 +31,24 @@ export default class App extends Component {
                 </div>
               </div>
             )}/>
+
             <Route path="/users" exact={true} render={() => (
-              <div className="app-view-users">
-                <div className="app-users">
+              <div className="app-view app-view-users">
+                <div className="app-content">
                   <Users />
+                  <Ugc />
                 </div>
               </div>
             )}/>
+
+            <Route path="/users/:userId" render={({ match }) => (
+              <div className="app-view app-view-user">
+                <div className="app-content">
+                  <User userId={match.params.userId}/>
+                </div>
+              </div>
+            )}/>
+
             <div className="app-footer">
               <Footer />
             </div>

@@ -34,6 +34,7 @@ class Sorters extends Component {
           key={sorter.title}
           onClick={() => {
             this.props.updateActiveSorter(sorter)
+            window.scrollTo(0, 0)
           }}>
           <i className="material-icons hidden">check_box</i>
           {sorter.title}
@@ -43,42 +44,41 @@ class Sorters extends Component {
   }
 
   render() {
-    if (!this.props.sorters) {
-      return (
-        <div className="navigation-sorters-list sorters">
-          <p>Loading sorting options...</p>
-        </div>
-      )
-    }
-
     return (
       <div
-        className={`navigation-sorters-list sorters ${(this.state.sorterListVisible) ? 'navigation-sorters-list-visible' : 'navigation-sorters-list-hidden'}`}>
-        <h3 className="title">Sorted By</h3>
-        {(this.state.sorterListVisible) ? (
-          <i
-            className="navigation-sorters-trigger material-icons"
-            onClick={() => {
-              this.setState({
-                sorterListVisible: !this.state.sorterListVisible
-              })
-            }}>
-            cancel
-          </i>
+        className={`navigation-sorters-list sorters ${(this.state.sorterListVisible) ?
+        'navigation-sorters-list-visible' : 'navigation-sorters-list-hidden'}`}>
+        {(this.props.sorters) ? (
+          <div className="navigation-sorters-list-column">
+            <h3 className="title">Sorted By</h3>
+            {(this.state.sorterListVisible) ? (
+              <i
+                className="navigation-sorters-trigger material-icons"
+                onClick={() => {
+                  this.setState({
+                    sorterListVisible: !this.state.sorterListVisible
+                  })
+                }}>
+                cancel
+              </i>
+            ) : (
+              <i
+                className="navigation-sorters-trigger material-icons"
+                onClick={() => {
+                  this.setState({
+                    sorterListVisible: !this.state.sorterListVisible
+                  })
+                }}>
+                arrow_drop_down_circle
+              </i>
+            )}
+            <div className="navigation-sorters">
+              {this.renderSorters()}
+            </div>
+          </div>
         ) : (
-          <i
-            className="navigation-sorters-trigger material-icons"
-            onClick={() => {
-              this.setState({
-                sorterListVisible: !this.state.sorterListVisible
-              })
-            }}>
-            arrow_drop_down_circle
-          </i>
+          <p>Loading sorting options...</p>
         )}
-        <div className="navigation-sorters">
-          {this.renderSorters()}
-        </div>
       </div>
     )
   }

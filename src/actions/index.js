@@ -47,6 +47,15 @@ export const fetchUsers = () => {
   }
 }
 
+export const fetchUgc = () => {
+  const request = axios.get(urls.DATA_UGC)
+
+  return {
+    type: types.FETCH_UGC,
+    payload: request,
+  }
+}
+
 export const updateActiveFilters = (payload) => {
   return {
     type: types.UPDATE_ACTIVE_FILTERS,
