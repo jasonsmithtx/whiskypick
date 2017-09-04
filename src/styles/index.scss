@@ -52,6 +52,14 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: lowercase;
+
+    a {
+      transition: all 0.25 linear;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 }
 
@@ -350,28 +358,113 @@ body {
       }
     }
   }
-  .ugc {
-    .ugc-item {
-      width: 23%;
-      height: 23%;
-      min-height: 360px;
-      margin: 1%;
-      float: left;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center center;
-      position: relative;
-      transition: all 0.25s linear;
 
-      &:hover {
-        opacity: 0.9;
+  .user {
+    text-align: center;
+
+    .user-mobile-close-button {
+      display: none;
+    }
+
+    .user-title {
+      font-family: $fontHeadings;
+      color: $colorBlack;
+      font-size: 3em;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 0.7em;
+
+      span {
+        font-weight: bold;
       }
-      .user {
-        position: absolute;
-        left: 5%;
-        bottom: 5%;
-        font-size: 2em;
-        text-shadow: 0 0 10px transparentize($colorBlack, 0.2);
+    }
+
+    .user-favorites {
+      .user-favorite {
+        background: $colorGrayLight;
+        margin: 0 auto 2%;
+        clear: both;
+        overflow: hidden;
+        width: 1280px;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+
+        .rank,
+        .image,
+        .title,
+        .rating {
+          float: left;
+        }
+
+        .rank {
+          width: 160px;
+          height: 160px;
+          background: $colorPrimary;
+          font-family: $fontHeadings;
+          color: $colorBlack;
+          font-weight: bold;
+          font-size: 4em;
+          line-height: 160px;
+        }
+        .image {
+          width: 160px;
+          height: 160px;
+          opacity: 0.9;
+          transition: all .25s ease-in-out;
+        }
+        .title {
+          width: 720px;
+          padding: 30px 40px 0;
+          text-align: left;
+
+          .brand {
+            font-family: $fontHeadings;
+            color: $colorBlack;
+            font-size: 3em;
+            height: 36px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+          }
+          .name {
+            font-size: 2em;
+            height: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .rating {
+          width: 160px;
+          height: 160px;
+          background: $colorPrimary;
+          font-family: $fontHeadings;
+          color: $colorBlack;
+          font-weight: bold;
+          font-size: 4em;
+          line-height: 160px;
+
+          .rating-pct {
+            font-size: 70%;
+          }
+        }
+
+        &:hover {
+          background: transparentize($colorGrayLight, 0.2);
+
+          .image {
+            opacity: 1;
+            transition: all .25s ease-in-out;
+          }
+          .rank,
+          .title,
+          .rating {
+            opacity: 0.8;
+            transition: all .25s ease-in-out;
+          }
+        }
       }
     }
   }
@@ -542,6 +635,7 @@ body {
 /* media queries
 -------------------------------------------------- */
 @media only screen and (max-width: 768px) {
+  /* app-header */
   .app-header {
     text-align: left;
     padding: 20px 0;
@@ -559,53 +653,7 @@ body {
       color: $colorGrayDark;
     }
   }
-  .app-content {
-    margin: 64px 3.2% 48px;
-
-    .content {
-      .whisky {
-        background: #f2f2f2;
-        width: 96%;
-
-        .title {
-          .brand {
-            font-size: 2.4em;
-            line-height: 30px;
-            height: 30px;
-          }
-          .name {
-            font-size: 1.8em;
-            line-height: 24px;
-          }
-        }
-        .details {
-          .rating,
-          .link {
-            height: 60px;
-            line-height: 60px;
-          }
-        }
-        .attributes {
-          padding: 3%;
-          width: 94%;
-
-          .attribute {
-            width: auto;
-            margin-right: 20px;
-
-            .attribute-key {
-              font-size: 14px;
-              line-height: 20px;
-            }
-            .attribute-value {
-              font-size: 1em;
-              line-height: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
+  /* app-navigation */
   .app-navigation {
     .navigation-trigger {
       left: 24px;
@@ -667,6 +715,112 @@ body {
       }
     }
   }
+  /* app-content */
+  .app-content {
+    margin: 64px 3.2% 48px;
+
+    .content {
+      .whisky {
+        background: #f2f2f2;
+        width: 96%;
+
+        .title {
+          .brand {
+            font-size: 2.4em;
+            line-height: 30px;
+            height: 30px;
+          }
+          .name {
+            font-size: 1.8em;
+            line-height: 24px;
+          }
+        }
+        .details {
+          .rating,
+          .link {
+            height: 60px;
+            line-height: 60px;
+          }
+        }
+        .attributes {
+          padding: 3%;
+          width: 94%;
+
+          .attribute {
+            width: auto;
+            margin-right: 20px;
+
+            .attribute-key {
+              font-size: 14px;
+              line-height: 20px;
+            }
+            .attribute-value {
+              font-size: 1em;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+    .user {
+      .user-mobile-close-button {
+        display: block;
+        left: 24px;
+        top: 16px;
+        position: fixed;
+        height: 34px;
+        width: 34px;
+        z-index: 2;
+
+        .material-icons {
+          font-size: 34px;
+          color: $colorGrayDark;
+        }
+      }
+      .user-title {
+        font-size: 1.6em;
+      }
+      .user-favorites {
+        .user-favorite {
+          width: 96%;
+          height: 60px;
+          margin: 0 auto 2%;
+
+          .rank {
+            width: 9%;
+            height: 60px;
+            font-size: 2em;
+            line-height: 60px;
+          }
+          .image {
+            width: 19%;
+            height: auto;
+          }
+          .title {
+            width: 50%;
+            padding: 10px 2.5% 0;
+
+            .brand {
+              font-size: 1.6em;
+              height: 20px;
+              margin-bottom: 0.2em;
+            }
+            .name {
+              font-size: 1.2em;
+              height: 14px;
+            }
+          }
+          .rating {
+            width: 17%;
+            height: 60px;
+            font-size: 2em;
+            line-height: 60px;
+          }
+        }
+      }
+    }
+  }
+  /* app-modal */
   .app-modal {
     .modal {
       .modal-overlay {

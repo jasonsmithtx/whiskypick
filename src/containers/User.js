@@ -2,23 +2,23 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import _ from 'lodash'
-import { fetchWhiskies } from '../actions/index'
+import { fetchWhiskies, openModal } from '../actions/index'
 
 class User extends Component {
   componentDidMount() {
     this.props.fetchWhiskies()
   }
 
-  getFavorites(whiskeys) {
+  getFavorites(whiskys) {
     const users = []
-    const favoritesLimit = 10
+    const favoritesLimit = 100
 
-    whiskeys.forEach(whiskey => {
-      whiskey.ratings.forEach(user => {
+    whiskys.forEach(whisky => {
+      whisky.ratings.forEach(user => {
         users.push({
           name: user.name,
           rating: user.score,
-          whiskey
+          whisky
         })
       })
     })
@@ -42,29 +42,26 @@ class User extends Component {
   }
 
   renderUserFavorites(userFavorites) {
-    return userFavorites.map(userFavorite => {
-      const whisky = userFavorite.whiskey
+    return userFavorites.map((userFavorite, index) => {
+      const whisky = userFavorite.whisky
       return (
         <div
-          className="whisky"
+          className="user-favorite"
           key={whisky.image_url}
-          onClick={(event) => {
-            if (!event.target.classList.contains('link')) this.props.openModal(whisky)
+          onClick={() => {
+            this.props.openModal(whisky)
           }}>
 
+          <p className="rank">{index + 1}</p>
           <img
             className="image"
             src={`${process.env.PUBLIC_URL}/images/whiskies/thumbnails/${whisky.image_url}`}
             alt={`${whisky.brand} - ${whisky.name}`} />
-
           <div className="title">
             <h2 className="brand">{whisky.brand}</h2>
             <h3 className="name">{whisky.name}</h3>
           </div>
-
-          <div className="details">
-            <p className="rating">{userFavorite.rating}<span className="rating-pct">%</span></p>
-          </div>
+          <p className="rating">{userFavorite.rating}<span className="rating-pct">%</span></p>
         </div>
       )
     })
@@ -85,11 +82,15 @@ class User extends Component {
 
     return (
       <div className="user">
-        <Link to="/users">
-          <p className="title">Back</p>
-        </Link>
-        <h1 className="title">{userName}</h1>
-        {this.renderUserFavorites(userFavorites.ratings)}
+        <div className="user-mobile-close-button">
+          <Link to="/">
+            <i className="material-icons">close</i>
+          </Link>
+        </div>
+        <h1 className="user-title">Favorite whiskys for <span>{userName}</span></h1>
+        <div className="user-favorites">
+          {this.renderUserFavorites(userFavorites.ratings)}
+        </div>
       </div>
     )
   }
@@ -101,4 +102,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { fetchWhiskies })(User)
+export default connect(mapStateToProps, { fetchWhiskies, openModal })(User)

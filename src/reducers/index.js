@@ -49,25 +49,6 @@ export default function(state = initialState, action) {
       })
     }
 
-    case types.FETCH_USERS: {
-      const users = [ ...action.payload.data.data ]
-
-      return deepFreeze({
-        ...state,
-        users,
-      })
-    }
-
-    case types.FETCH_UGC: {
-      let ugc = [ ...action.payload.data ]
-      ugc = ugc.sort(() => (Math.random() - 0.5))
-
-      return deepFreeze({
-        ...state,
-        ugc,
-      })
-    }
-
     case types.UPDATE_ACTIVE_FILTERS: {
       const filter = action.payload
       let activeFilters = [ ...state.activeFilters ]

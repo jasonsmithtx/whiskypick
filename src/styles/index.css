@@ -87,6 +87,10 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: lowercase; }
+    .app-header .title a {
+      transition: all 0.25 linear; }
+      .app-header .title a:hover {
+        opacity: 0.7; }
 
 /* app-navigation -------------- */
 .app-navigation {
@@ -295,25 +299,87 @@ body {
         .app-content .content .whisky:hover .image {
           opacity: 1;
           transition: all .25s ease-in-out; }
-  .app-content .ugc .ugc-item {
-    width: 23%;
-    height: 23%;
-    min-height: 360px;
-    margin: 1%;
-    float: left;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    transition: all 0.25s linear; }
-    .app-content .ugc .ugc-item:hover {
-      opacity: 0.9; }
-    .app-content .ugc .ugc-item .user {
-      position: absolute;
-      left: 5%;
-      bottom: 5%;
-      font-size: 2em;
-      text-shadow: 0 0 10px rgba(32, 32, 32, 0.8); }
+  .app-content .user {
+    text-align: center; }
+    .app-content .user .user-mobile-close-button {
+      display: none; }
+    .app-content .user .user-title {
+      font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
+      color: #202020;
+      font-size: 3em;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 0.7em; }
+      .app-content .user .user-title span {
+        font-weight: bold; }
+    .app-content .user .user-favorites .user-favorite {
+      background: #f2f2f2;
+      margin: 0 auto 2%;
+      clear: both;
+      overflow: hidden;
+      width: 1280px;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out; }
+      .app-content .user .user-favorites .user-favorite .rank,
+      .app-content .user .user-favorites .user-favorite .image,
+      .app-content .user .user-favorites .user-favorite .title,
+      .app-content .user .user-favorites .user-favorite .rating {
+        float: left; }
+      .app-content .user .user-favorites .user-favorite .rank {
+        width: 160px;
+        height: 160px;
+        background: #ffbe00;
+        font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
+        color: #202020;
+        font-weight: bold;
+        font-size: 4em;
+        line-height: 160px; }
+      .app-content .user .user-favorites .user-favorite .image {
+        width: 160px;
+        height: 160px;
+        opacity: 0.9;
+        transition: all .25s ease-in-out; }
+      .app-content .user .user-favorites .user-favorite .title {
+        width: 720px;
+        padding: 30px 40px 0;
+        text-align: left; }
+        .app-content .user .user-favorites .user-favorite .title .brand {
+          font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
+          color: #202020;
+          font-size: 3em;
+          height: 36px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: 0.5em;
+          font-weight: bold; }
+        .app-content .user .user-favorites .user-favorite .title .name {
+          font-size: 2em;
+          height: 24px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+      .app-content .user .user-favorites .user-favorite .rating {
+        width: 160px;
+        height: 160px;
+        background: #ffbe00;
+        font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
+        color: #202020;
+        font-weight: bold;
+        font-size: 4em;
+        line-height: 160px; }
+        .app-content .user .user-favorites .user-favorite .rating .rating-pct {
+          font-size: 70%; }
+      .app-content .user .user-favorites .user-favorite:hover {
+        background: rgba(242, 242, 242, 0.8); }
+        .app-content .user .user-favorites .user-favorite:hover .image {
+          opacity: 1;
+          transition: all .25s ease-in-out; }
+        .app-content .user .user-favorites .user-favorite:hover .rank,
+        .app-content .user .user-favorites .user-favorite:hover .title,
+        .app-content .user .user-favorites .user-favorite:hover .rating {
+          opacity: 0.8;
+          transition: all .25s ease-in-out; }
 
 /* app-footer -------------- */
 .app-footer {
@@ -446,6 +512,7 @@ body {
 /* media queries
 -------------------------------------------------- */
 @media only screen and (max-width: 768px) {
+  /* app-header */
   .app-header {
     text-align: left;
     padding: 20px 0;
@@ -460,34 +527,7 @@ body {
       line-height: 24px;
       margin-left: 80px;
       color: #545456; }
-  .app-content {
-    margin: 64px 3.2% 48px; }
-    .app-content .content .whisky {
-      background: #f2f2f2;
-      width: 96%; }
-      .app-content .content .whisky .title .brand {
-        font-size: 2.4em;
-        line-height: 30px;
-        height: 30px; }
-      .app-content .content .whisky .title .name {
-        font-size: 1.8em;
-        line-height: 24px; }
-      .app-content .content .whisky .details .rating,
-      .app-content .content .whisky .details .link {
-        height: 60px;
-        line-height: 60px; }
-      .app-content .content .whisky .attributes {
-        padding: 3%;
-        width: 94%; }
-        .app-content .content .whisky .attributes .attribute {
-          width: auto;
-          margin-right: 20px; }
-          .app-content .content .whisky .attributes .attribute .attribute-key {
-            font-size: 14px;
-            line-height: 20px; }
-          .app-content .content .whisky .attributes .attribute .attribute-value {
-            font-size: 1em;
-            line-height: 20px; }
+  /* app-navigation */
   .app-navigation .navigation-trigger {
     left: 24px;
     top: 16px; }
@@ -519,6 +559,76 @@ body {
         opacity: 1; }
     .app-navigation .navigation-content .navigation-sorters-list .navigation-sorters .navigation-sorter:hover {
       opacity: 1; }
+  /* app-content */
+  .app-content {
+    margin: 64px 3.2% 48px; }
+    .app-content .content .whisky {
+      background: #f2f2f2;
+      width: 96%; }
+      .app-content .content .whisky .title .brand {
+        font-size: 2.4em;
+        line-height: 30px;
+        height: 30px; }
+      .app-content .content .whisky .title .name {
+        font-size: 1.8em;
+        line-height: 24px; }
+      .app-content .content .whisky .details .rating,
+      .app-content .content .whisky .details .link {
+        height: 60px;
+        line-height: 60px; }
+      .app-content .content .whisky .attributes {
+        padding: 3%;
+        width: 94%; }
+        .app-content .content .whisky .attributes .attribute {
+          width: auto;
+          margin-right: 20px; }
+          .app-content .content .whisky .attributes .attribute .attribute-key {
+            font-size: 14px;
+            line-height: 20px; }
+          .app-content .content .whisky .attributes .attribute .attribute-value {
+            font-size: 1em;
+            line-height: 20px; }
+    .app-content .user .user-mobile-close-button {
+      display: block;
+      left: 24px;
+      top: 16px;
+      position: fixed;
+      height: 34px;
+      width: 34px;
+      z-index: 2; }
+      .app-content .user .user-mobile-close-button .material-icons {
+        font-size: 34px;
+        color: #545456; }
+    .app-content .user .user-title {
+      font-size: 1.6em; }
+    .app-content .user .user-favorites .user-favorite {
+      width: 96%;
+      height: 60px;
+      margin: 0 auto 2%; }
+      .app-content .user .user-favorites .user-favorite .rank {
+        width: 9%;
+        height: 60px;
+        font-size: 2em;
+        line-height: 60px; }
+      .app-content .user .user-favorites .user-favorite .image {
+        width: 19%;
+        height: auto; }
+      .app-content .user .user-favorites .user-favorite .title {
+        width: 50%;
+        padding: 10px 2.5% 0; }
+        .app-content .user .user-favorites .user-favorite .title .brand {
+          font-size: 1.6em;
+          height: 20px;
+          margin-bottom: 0.2em; }
+        .app-content .user .user-favorites .user-favorite .title .name {
+          font-size: 1.2em;
+          height: 14px; }
+      .app-content .user .user-favorites .user-favorite .rating {
+        width: 17%;
+        height: 60px;
+        font-size: 2em;
+        line-height: 60px; }
+  /* app-modal */
   .app-modal .modal .modal-overlay .modal-dialog {
     height: 500px;
     margin-top: -250px;

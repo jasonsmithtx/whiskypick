@@ -2,5 +2,5 @@ export const DATA_WHISKIES = '//cdn.rawgit.com/kevinnayar/datasets/b4452499/whis
 export const DATA_FILTERS = '//cdn.rawgit.com/kevinnayar/datasets/b4452499/whiskey/public/data/filters.json'
 export const DATA_PROFILES = '//cdn.rawgit.com/kevinnayar/datasets/b4452499/whiskey/public/data/profiles.json'
 export const DATA_SORTERS = '//cdn.rawgit.com/kevinnayar/datasets/b4452499/whiskey/public/data/sorters.json'
-export const DATA_USERS = '//cdn.rawgit.com/kevinnayar/datasets/1ce53bc0/whiskey/public/data/users.json'
-export const DATA_UGC = '//api.massrelevance.com/kevinnayar/whiskypick.json?limit=48'
+// export const DATA_USERS = '//cdn.rawgit.com/kevinnayar/datasets/1ce53bc0/whiskey/public/data/users.json'
+// export const DATA_UGC = '//api.massrelevance.com/kevinnayar/whiskypick.json?limit=48'
