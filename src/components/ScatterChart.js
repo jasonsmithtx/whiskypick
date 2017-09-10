@@ -19,16 +19,14 @@ export default class ScatterChart extends Component {
 
     const chartConfig = {
       data: {
-        datasets: [
-          {
-            backgroundColor: 'rgba(255,190,0,0.7)',
-            borderWidth: 0,
-            data,
-            fill: false,
-            hoverBackgroundColor: 'rgba(237,174,0,0.7)',
-            showLine: false,
-          }
-        ]
+        datasets: [{
+          backgroundColor: 'rgba(255,190,0,0.7)',
+          hoverBackgroundColor: 'rgba(237,174,0,0.7)',
+          borderWidth: 0,
+          fill: false,
+          showLine: false,          
+          data,
+        }]
       },
       options: {
         responsive: true,

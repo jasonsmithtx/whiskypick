@@ -16,14 +16,12 @@ export default class BarChart extends Component {
     const chartConfig = {
       data: {
         labels,
-        datasets: [
-          {
-            backgroundColor: 'rgba(255,190,0,0.7)',
-            hoverBackgroundColor: 'rgba(237,174,0,0.7)',
-            borderWidth: 0,
-            data,
-          }
-        ]
+        datasets: [{
+          backgroundColor: 'rgba(255,190,0,0.7)',
+          hoverBackgroundColor: 'rgba(237,174,0,0.7)',
+          borderWidth: 0,
+          data,
+        }]
       },
       options: {
         responsive: true,
@@ -34,7 +32,12 @@ export default class BarChart extends Component {
               min: 0,
               max: 100
             }
-          }]
+          }],
+          xAxes: [{
+            ticks: {
+              autoSkip: false
+            }
+          }],
         },
         legend: {
           display: false
