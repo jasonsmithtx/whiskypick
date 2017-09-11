@@ -79,10 +79,10 @@ class Whiskies extends Component {
                 content={whisky.average_rating}
                 className="rating-value">
                 <meta itemProp="bestRating" content="100" />
+                <meta itemProp="ratingCount" content={whisky.ratings_count} />
                 {whisky.average_rating}
                 </span>
               <span className="rating-pct">%</span>
-              <meta itemProp="ratingCount" content={whisky.ratings_count} />
             </p>
             <a className="link" href={whisky.url} target="_blank" rel="noopener noreferrer">
               Visit Site <i className="material-icons">chevron_right</i>
