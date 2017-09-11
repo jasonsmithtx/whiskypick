@@ -16,6 +16,10 @@ export default function(state = initialState, action) {
     case types.FETCH_WHISKIES: {
       const whiskies = [ ...action.payload.data.data ]
 
+      whiskies.forEach(whisky => {
+        whisky.ratings_count = whisky.ratings.length
+      })
+
       return deepFreeze({
         ...state,
         whiskies,

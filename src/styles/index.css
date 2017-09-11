@@ -431,7 +431,8 @@ body {
       .app-modal .modal .modal-overlay .modal-dialog .image {
         width: 500px;
         height: 500px;
-        float: left; }
+        float: left;
+        background: #f2f2f2; }
       .app-modal .modal .modal-overlay .modal-dialog .modal-header .modal-close-trigger {
         position: absolute;
         right: 25px;

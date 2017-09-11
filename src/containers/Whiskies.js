@@ -47,6 +47,8 @@ class Whiskies extends Component {
     return whiskies.map(whisky => {
       return (
         <div
+          itemScope
+          itemType="http://schema.org/Product"
           className="whisky"
           key={whisky.image_url}
           onClick={(event) => {
@@ -54,17 +56,34 @@ class Whiskies extends Component {
           }}>
 
           <img
+            itemProp="image"
             className="image"
             src={`${process.env.PUBLIC_URL}/images/whiskies/thumbnails/${whisky.image_url}`}
             alt={`${whisky.brand} - ${whisky.name}`} />
 
-          <div className="title">
-            <h2 className="brand">{whisky.brand}</h2>
+          <div
+            itemProp="name"
+            className="title">
+            <h2 className="brand">{whisky.brand} </h2>
             <h3 className="name">{whisky.name}</h3>
           </div>
 
           <div className="details">
-            <p className="rating">{whisky.average_rating}<span className="rating-pct">%</span></p>
+            <p
+              itemScope
+              itemType="http://schema.org/AggregateRating"
+              itemProp="aggregateRating"
+              className="rating">
+              <span
+                itemProp="ratingValue"
+                content={whisky.average_rating}
+                className="rating-value">
+                <meta itemProp="bestRating" content="100" />
+                {whisky.average_rating}
+                </span>
+              <span className="rating-pct">%</span>
+              <meta itemProp="ratingCount" content={whisky.ratings_count} />
+            </p>
             <a className="link" href={whisky.url} target="_blank" rel="noopener noreferrer">
               Visit Site <i className="material-icons">chevron_right</i>
             </a>
@@ -85,10 +104,23 @@ class Whiskies extends Component {
             </div>
             <div className="attribute">
               <i className="attribute-key material-icons">monetization_on</i>
-              <p className="attribute-value">${whisky.price}</p>
+              <p
+                itemScope
+                itemType="http://schema.org/Offer"
+                itemProp="offers"
+                className="attribute-value">
+                <span
+                  itemProp="priceCurrency"
+                  content="USD">
+                  $
+                </span>
+                <span
+                  itemProp="price">
+                  {whisky.price}
+                </span>
+              </p>
             </div>
           </div>
-
         </div>
       )
     })
