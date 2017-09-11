@@ -235,6 +235,8 @@ body {
           text-overflow: ellipsis;
           margin-bottom: 0.5em;
           font-weight: bold; }
+        .app-content .content .whisky .title .title-space {
+          display: none; }
         .app-content .content .whisky .title .name {
           font-size: 2em;
           height: 24px;

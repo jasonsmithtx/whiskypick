@@ -64,7 +64,8 @@ class Whiskies extends Component {
           <div
             itemProp="name"
             className="title">
-            <h2 className="brand">{whisky.brand} </h2>
+            <h2 className="brand">{whisky.brand}</h2>
+            <p className="title-space">&nbsp;</p>
             <h3 className="name">{whisky.name}</h3>
           </div>
 
