@@ -513,7 +513,7 @@ body {
     right: 20px;
     bottom: 20px;
     background: #edae00;
-    color: #545456;
+    color: #202020;
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -523,16 +523,17 @@ body {
     .app-navigation .navigation-trigger:hover {
       opacity: 1; }
   .app-navigation .navigation-hidden .navigation-content {
-    margin-top: -768px;
-    transition: all 0.35s ease-in-out; }
+    margin-top: 0;
+    margin-left: 100%;
+    transition: all 0.15s ease-in-out; }
   .app-navigation .navigation-visible .navigation-trigger {
     left: auto;
     top: auto;
     right: 20px;
     bottom: 20px;
-    color: #545456; }
+    color: #202020; }
   .app-navigation .navigation-visible .navigation-content {
-    transition: all 0.35s ease-in-out; }
+    transition: all 0.15s ease-in-out; }
   .app-navigation .navigation-content {
     height: 718px;
     padding: 25px 5%; }
@@ -560,6 +561,8 @@ body {
     .app-content .content .whisky {
       background: #f2f2f2;
       width: 96%; }
+      .app-content .content .whisky .image {
+        opacity: 1; }
     .app-content .user .user-mobile-close-button {
       display: block;
       left: 24px;
@@ -602,8 +605,8 @@ body {
         line-height: 60px; }
   /* app-modal */
   .app-modal .modal .modal-overlay .modal-dialog {
-    height: 500px;
-    margin-top: -250px;
+    height: 550px;
+    margin-top: -275px;
     text-align: center; }
     .app-modal .modal .modal-overlay .modal-dialog .image {
       width: 150px;
@@ -646,7 +649,17 @@ body {
       border-right: 2px solid #edae00;
       border-bottom: 2px solid #edae00; }
     .app-modal .modal .modal-overlay .modal-dialog .modal-footer .attributes {
-      display: none; }
+      width: 100%;
+      height: 50px;
+      line-height: 50px; }
+      .app-modal .modal .modal-overlay .modal-dialog .modal-footer .attributes .attribute {
+        padding: 0 2.5%; }
+        .app-modal .modal .modal-overlay .modal-dialog .modal-footer .attributes .attribute .attribute-key {
+          line-height: 50px;
+          font-size: 1.4em; }
+        .app-modal .modal .modal-overlay .modal-dialog .modal-footer .attributes .attribute .attribute-value {
+          line-height: 50px;
+          font-size: 1.2em; }
   /* app-footer */
   .app-footer {
     display: none; } }
