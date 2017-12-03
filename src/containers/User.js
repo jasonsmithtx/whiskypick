@@ -28,7 +28,7 @@ class User extends Component {
 
     const favorites = names.map(name => {
       return {
-        name,
+        name: name.toUpperCase(),
         ratings: groupedUsers[name]
       }
     })
@@ -77,7 +77,7 @@ class User extends Component {
     }
 
     const favorites = this.getFavorites(this.props.whiskies)
-    const userName = this.props.userId.replace(/-/g, ' ').replace(/(^|\s)[a-z]/g, f => f.toUpperCase())
+    const userName = this.props.userId.replace(/-/g, ' ').toUpperCase()
     const userFavorites = favorites.find(favorite => favorite.name === userName)
 
     return (

@@ -30,7 +30,7 @@ export default class App extends Component {
               </div>
             )}/>
 
-            <Route path="/user/:userId" render={({ match }) => (
+            <Route path="/user/:userId" exact={true} render={({ match }) => (
               <div className="app-view app-view-user">
                 <div className="app-content">
                   <User userId={match.params.userId}/>
