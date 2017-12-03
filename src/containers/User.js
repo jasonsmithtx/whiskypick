@@ -55,7 +55,7 @@ class User extends Component {
           <p className="rank">{index + 1}</p>
           <img
             className="image"
-            src={`${process.env.PUBLIC_URL}/images/whiskies/thumbnails/${whisky.image_url}`}
+            src={`${process.env.PUBLIC_URL}/images/whiskies/${whisky.image_url}`}
             alt={`${whisky.brand} - ${whisky.name}`} />
           <div className="title">
             <h2 className="brand">{whisky.brand}</h2>

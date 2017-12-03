@@ -51,23 +51,13 @@ class Whiskies extends Component {
           itemType="http://schema.org/Product"
           className="whisky"
           key={whisky.image_url}
-          onClick={(event) => {
-            if (!event.target.classList.contains('link')) this.props.openModal(whisky)
-          }}>
+          onClick={() => this.props.openModal(whisky)}>
 
           <img
             itemProp="image"
             className="image"
-            src={`${process.env.PUBLIC_URL}/images/whiskies/thumbnails/${whisky.image_url}`}
+            src={`${process.env.PUBLIC_URL}/images/whiskies/${whisky.image_url}`}
             alt={`${whisky.brand} - ${whisky.name}`} />
-
-          <div
-            itemProp="name"
-            className="title">
-            <h2 className="brand">{whisky.brand}</h2>
-            <p className="title-space">&nbsp;</p>
-            <h3 className="name">{whisky.name}</h3>
-          </div>
 
           <div className="details">
             <p
@@ -85,43 +75,15 @@ class Whiskies extends Component {
                 </span>
               <span className="rating-pct">%</span>
             </p>
-            <a className="link" href={whisky.url} target="_blank" rel="noopener noreferrer">
-              Visit Site <i className="material-icons">chevron_right</i>
-            </a>
+            <div
+              itemProp="name"
+              className="title">
+              <h2 className="brand">{whisky.brand}</h2>
+              <p className="title-space">&nbsp;</p>
+              <h3 className="name">{whisky.name}</h3>
+            </div>
           </div>
 
-          <div className="attributes">
-            <div className="attribute">
-              <i className="attribute-key material-icons">local_bar</i>
-              <p className="attribute-value">{whisky.type}</p>
-            </div>
-            <div className="attribute">
-              <i className="attribute-key material-icons">place</i>
-              <p className="attribute-value">{whisky.origin}</p>
-            </div>
-            <div className="attribute">
-              <i className="attribute-key material-icons">watch_later</i>
-              { (whisky.age === 0) ? <p className="attribute-value">NAS</p> : <p className="attribute-value">{whisky.age} years</p> }
-            </div>
-            <div className="attribute">
-              <i className="attribute-key material-icons">monetization_on</i>
-              <p
-                itemScope
-                itemType="http://schema.org/Offer"
-                itemProp="offers"
-                className="attribute-value">
-                <span
-                  itemProp="priceCurrency"
-                  content="USD">
-                  $
-                </span>
-                <span
-                  itemProp="price">
-                  {whisky.price}
-                </span>
-              </p>
-            </div>
-          </div>
         </div>
       )
     })
@@ -154,3 +116,44 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { fetchWhiskies, openModal })(Whiskies)
+
+/*
+
+<a className="link" href={whisky.url} target="_blank" rel="noopener noreferrer">
+  Visit Site <i className="material-icons">chevron_right</i>
+</a>
+
+<div className="attributes">
+  <div className="attribute">
+    <i className="attribute-key material-icons">local_bar</i>
+    <p className="attribute-value">{whisky.type}</p>
+  </div>
+  <div className="attribute">
+    <i className="attribute-key material-icons">place</i>
+    <p className="attribute-value">{whisky.origin}</p>
+  </div>
+  <div className="attribute">
+    <i className="attribute-key material-icons">watch_later</i>
+    { (whisky.age === 0) ? <p className="attribute-value">NAS</p> : <p className="attribute-value">{whisky.age} years</p> }
+  </div>
+  <div className="attribute">
+    <i className="attribute-key material-icons">monetization_on</i>
+    <p
+      itemScope
+      itemType="http://schema.org/Offer"
+      itemProp="offers"
+      className="attribute-value">
+      <span
+        itemProp="priceCurrency"
+        content="USD">
+        $
+      </span>
+      <span
+        itemProp="price">
+        {whisky.price}
+      </span>
+    </p>
+  </div>
+</div>
+
+*/

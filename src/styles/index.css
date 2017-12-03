@@ -84,7 +84,6 @@ body {
     height: 60px;
     line-height: 60px;
     font-size: 8em;
-    font-weight: 600;
     letter-spacing: 2px;
     text-transform: lowercase; }
     .app-header .title a {
@@ -137,8 +136,7 @@ body {
         font-size: 2em;
         margin-bottom: 1.5em;
         font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
-        color: #ffbe00;
-        font-weight: bold; }
+        color: #ffbe00; }
     .app-navigation .navigation-content .navigation-list .navigation-list-item {
       width: 30%;
       float: left;
@@ -197,8 +195,8 @@ body {
 
 /* app-content -------------- */
 .app-content {
-  margin: 300px 3.2% 48px;
-  width: 93.6%;
+  margin: 300px 1.5% 48px;
+  width: 97%;
   overflow: hidden; }
   .app-content .content {
     overflow: hidden; }
@@ -209,72 +207,53 @@ body {
       font-weight: bold; }
     .app-content .content .whisky {
       background: #f2f2f2;
-      width: 29.33%;
+      width: 21%;
       margin: 0 2% 4%;
       float: left;
       cursor: pointer;
       transition: all .25s ease-in-out; }
       .app-content .content .whisky .image {
-        width: 38%;
-        float: left;
+        width: 100%;
         background: #202020;
         opacity: 0.9;
-        transition: all .25s ease-in-out; }
-      .app-content .content .whisky .title {
-        width: 58%;
-        padding: 10% 2% 0;
-        float: left;
-        text-align: center; }
-        .app-content .content .whisky .title .brand {
-          font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
-          color: #202020;
-          font-size: 3em;
-          height: 36px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          margin-bottom: 0.5em;
-          font-weight: bold; }
-        .app-content .content .whisky .title .title-space {
-          display: none; }
-        .app-content .content .whisky .title .name {
-          font-size: 2em;
-          height: 24px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis; }
+        transition: all .25s ease-in-out;
+        display: block; }
       .app-content .content .whisky .details {
-        clear: both;
-        overflow: hidden;
-        text-align: center; }
+        margin-top: -1px; }
         .app-content .content .whisky .details .rating {
-          width: 38%;
-          height: 80px;
-          line-height: 80px;
+          width: 25%;
+          height: 85px;
+          line-height: 85px;
           float: left;
           background: #edae00;
           color: #202020;
-          font-weight: bold;
-          font-size: 4em;
-          font-family: "Montserrat", "Arial Black", Helvetica, sans-serif; }
+          font-size: 2.4em;
+          font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
+          text-align: center;
+          font-weight: bold; }
           .app-content .content .whisky .details .rating .rating-pct {
             font-size: 70%; }
-        .app-content .content .whisky .details .link {
-          width: 62%;
-          height: 80px;
-          line-height: 80px;
+        .app-content .content .whisky .details .title {
+          width: 65%;
+          padding: 20px 5% 0;
+          height: 65px;
           float: left;
           background: #ffbe00;
-          color: #202020;
-          font-size: 2em;
-          transition: all 0.25s linear; }
-          .app-content .content .whisky .details .link .material-icons {
-            vertical-align: text-bottom;
-            transition: all 0.25s linear; }
-          .app-content .content .whisky .details .link:hover {
-            background: rgba(255, 190, 0, 0.9); }
-            .app-content .content .whisky .details .link:hover .material-icons {
-              margin-right: -10px; }
+          color: #202020; }
+          .app-content .content .whisky .details .title .brand {
+            font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
+            font-size: 2.2em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0.5em; }
+          .app-content .content .whisky .details .title .title-space {
+            display: none; }
+          .app-content .content .whisky .details .title .name {
+            font-size: 1.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
       .app-content .content .whisky .attributes {
         clear: both;
         color: #bbbbbb;
@@ -295,11 +274,11 @@ body {
             float: left; }
       .app-content .content .whisky:hover {
         background: rgba(242, 242, 242, 0.8); }
-        .app-content .content .whisky:hover .title {
-          opacity: 0.8;
-          transition: all .25s ease-in-out; }
         .app-content .content .whisky:hover .image {
           opacity: 1;
+          transition: all .25s ease-in-out; }
+        .app-content .content .whisky:hover .details {
+          opacity: 0.8;
           transition: all .25s ease-in-out; }
   .app-content .user {
     text-align: center; }
@@ -444,19 +423,18 @@ body {
         .app-modal .modal .modal-overlay .modal-dialog .modal-header .modal-close-trigger:hover {
           opacity: 0.7; }
       .app-modal .modal .modal-overlay .modal-dialog .modal-header .title {
-        width: calc(100% - 550px);
-        padding: 25px;
-        float: right; }
+        width: calc(100% - 580px);
+        padding: 35px 45px 35px 35px;
+        float: right;
+        color: #202020; }
         .app-modal .modal .modal-overlay .modal-dialog .modal-header .title .brand {
           font-family: "Montserrat", "Arial Black", Helvetica, sans-serif;
-          color: #202020;
           font-size: 4em;
           height: 46px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          margin-bottom: 0.5em;
-          font-weight: bold; }
+          margin-bottom: 0.5em; }
         .app-modal .modal .modal-overlay .modal-dialog .modal-header .title .name {
           font-size: 2em;
           height: 24px;
@@ -517,7 +495,6 @@ body {
 @media only screen and (max-width: 768px) {
   /* app-header */
   .app-header {
-    text-align: left;
     padding: 20px 0;
     width: 100%;
     height: 24px;
@@ -528,17 +505,32 @@ body {
       font-size: 2.4em;
       height: 24px;
       line-height: 24px;
-      margin-left: 80px;
       color: #545456; }
   /* app-navigation */
   .app-navigation .navigation-trigger {
-    left: 24px;
-    top: 16px; }
+    left: auto;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    background: #edae00;
+    color: #545456;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(32, 32, 32, 0.5); }
     .app-navigation .navigation-trigger:hover {
       opacity: 1; }
   .app-navigation .navigation-hidden .navigation-content {
     margin-top: -768px;
     transition: all 0.35s ease-in-out; }
+  .app-navigation .navigation-visible .navigation-trigger {
+    left: auto;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    color: #545456; }
   .app-navigation .navigation-visible .navigation-content {
     transition: all 0.35s ease-in-out; }
   .app-navigation .navigation-content {
@@ -564,33 +556,10 @@ body {
       opacity: 1; }
   /* app-content */
   .app-content {
-    margin: 64px 3.2% 48px; }
+    margin: 64px 1.5% 48px; }
     .app-content .content .whisky {
       background: #f2f2f2;
       width: 96%; }
-      .app-content .content .whisky .title .brand {
-        font-size: 2.4em;
-        line-height: 30px;
-        height: 30px; }
-      .app-content .content .whisky .title .name {
-        font-size: 1.8em;
-        line-height: 24px; }
-      .app-content .content .whisky .details .rating,
-      .app-content .content .whisky .details .link {
-        height: 60px;
-        line-height: 60px; }
-      .app-content .content .whisky .attributes {
-        padding: 3%;
-        width: 94%; }
-        .app-content .content .whisky .attributes .attribute {
-          width: auto;
-          margin-right: 20px; }
-          .app-content .content .whisky .attributes .attribute .attribute-key {
-            font-size: 14px;
-            line-height: 20px; }
-          .app-content .content .whisky .attributes .attribute .attribute-value {
-            font-size: 1em;
-            line-height: 20px; }
     .app-content .user .user-mobile-close-button {
       display: block;
       left: 24px;
@@ -677,4 +646,7 @@ body {
       border-right: 2px solid #edae00;
       border-bottom: 2px solid #edae00; }
     .app-modal .modal .modal-overlay .modal-dialog .modal-footer .attributes {
-      display: none; } }
+      display: none; }
+  /* app-footer */
+  .app-footer {
+    display: none; } }

@@ -34,7 +34,7 @@ class Modal extends Component {
           <div className="modal-dialog">
             <img
               className="image"
-              src={`${process.env.PUBLIC_URL}/images/whiskies/medium/${whisky.image_url}`}
+              src={`${process.env.PUBLIC_URL}/images/whiskies/${whisky.image_url}`}
               alt={`${whisky.brand} - ${whisky.name}`} />
 
             <div className="modal-header">
