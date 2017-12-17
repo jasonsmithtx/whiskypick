@@ -36,27 +36,41 @@ body {
 
 /* app-header -------------- */
 .app-header {
-  padding: 120px 5%;
-  height: 60px;
-  width: 90%;
-  position: absolute;
-  top: 0;
-  text-align: center;
-
-  .title {
-    color: $colorGray;
-    font-family: $fontHeadings;
+  .header {
+    padding: 120px 5%;
     height: 60px;
-    line-height: 60px;
-    font-size: 8em;
-    letter-spacing: 2px;
-    text-transform: lowercase;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    transition: all 0.5 ease;
 
-    a {
-      transition: all 0.25 linear;
+    &.sticky {
+      padding: 10px 5%;
+      background: $colorWhite;
+      z-index: 1;
+      position: fixed;
 
-      &:hover {
-        opacity: 0.7;
+      .title {
+        font-size: 2.8em;
+      }
+    }
+
+    .title {
+      color: $colorGray;
+      font-family: $fontHeadings;
+      height: 60px;
+      line-height: 60px;
+      font-size: 8em;
+      letter-spacing: 2px;
+      text-transform: lowercase;
+
+      a {
+        transition: all 0.25 linear;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -85,8 +99,8 @@ body {
   }
   .navigation-trigger {
     position: fixed;
-    left: 10px;
-    top: 10px;
+    left: 18px;
+    top: 18px;
     height: 34px;
     width: 34px;
     font-size: 34px;
@@ -611,21 +625,37 @@ body {
 
 /* media queries
 -------------------------------------------------- */
+@media only screen and (max-width: 1280px) {
+  .app-content {
+    margin: 300px 5% 48px;
+    width: 90%;
+
+    .content {
+      .whisky {
+        width: 29.33%;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   /* app-header */
   .app-header {
-    padding: 20px 0;
-    width: 100%;
-    height: 24px;
-    background: $colorWhite;
-    z-index: 1;
-    position: fixed;
-
-    .title {
-      font-size: 2.4em;
+    .header,
+    .header.sticky {
+      padding: 20px 0;
+      width: 100%;
       height: 24px;
-      line-height: 24px;
-      color: $colorGrayDark;
+      background: $colorWhite;
+      z-index: 1;
+      position: fixed;
+
+      .title {
+        font-size: 2.4em;
+        height: 24px;
+        line-height: 24px;
+        color: $colorGrayDark;
+      }
     }
   }
   /* app-navigation */
@@ -668,7 +698,7 @@ body {
       }
     }
     .navigation-content {
-      height: 718px;
+      height: 100%;
       padding: 25px 5%;
 
       .navigation-list,
@@ -711,6 +741,7 @@ body {
   /* app-content */
   .app-content {
     margin: 64px 1.5% 48px;
+    width: 97%;
 
     .content {
       .whisky {
@@ -851,7 +882,7 @@ body {
 
                 .attribute-key {
                   line-height: 50px;
-                  font-size: 1.4em;                  
+                  font-size: 1.4em;
                 }
                 .attribute-value {
                   line-height: 50px;
