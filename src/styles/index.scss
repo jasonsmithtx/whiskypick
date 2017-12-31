@@ -259,13 +259,11 @@ body {
       .image {
         width: 100%;
         background: $colorBlack;
-        opacity: 0.9;
         transition: all .25s ease-in-out;
         display: block;
       }
       .details {
         margin-top: -1px;
-
 
         .rating {
           width: 25%;
@@ -339,11 +337,12 @@ body {
         background: transparentize($colorGrayLight, 0.2);
 
         .image {
-          opacity: 1;
+          filter: contrast(120%);
           transition: all .25s ease-in-out;
         }
         .details {
-          opacity: 0.8;
+
+          filter: contrast(110%);
           transition: all .25s ease-in-out;
         }
       }

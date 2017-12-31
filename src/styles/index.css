@@ -223,7 +223,6 @@ body {
       .app-content .content .whisky .image {
         width: 100%;
         background: #202020;
-        opacity: 0.9;
         transition: all .25s ease-in-out;
         display: block; }
       .app-content .content .whisky .details {
@@ -283,10 +282,10 @@ body {
       .app-content .content .whisky:hover {
         background: rgba(242, 242, 242, 0.8); }
         .app-content .content .whisky:hover .image {
-          opacity: 1;
+          filter: contrast(120%);
           transition: all .25s ease-in-out; }
         .app-content .content .whisky:hover .details {
-          opacity: 0.8;
+          filter: contrast(110%);
           transition: all .25s ease-in-out; }
   .app-content .user {
     text-align: center; }
