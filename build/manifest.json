@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "WhiskyPick",
+  "name": "WhiskyPick",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "images/icon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
