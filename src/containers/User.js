@@ -52,7 +52,7 @@ class User extends Component {
             this.props.openModal(whisky)
           }}>
 
-          <p className="rank">{index + 1}</p>
+          <p className="rank">{index + 1}.</p>
           <img
             className="image"
             src={`${process.env.PUBLIC_URL}/images/whiskies/${whisky.image_url}`}

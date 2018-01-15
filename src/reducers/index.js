@@ -14,7 +14,7 @@ export default function(state = initialState, action) {
   switch (action.type) {
 
     case types.FETCH_WHISKIES: {
-      const whiskies = [ ...action.payload.data.data ]
+      const whiskies = [ ...action.payload.data ]
 
       whiskies.forEach(whisky => {
         whisky.ratings_count = whisky.ratings.length
@@ -27,7 +27,7 @@ export default function(state = initialState, action) {
     }
 
     case types.FETCH_FILTERS: {
-      const filters = [ ...action.payload.data.data ]
+      const filters = [ ...action.payload.data ]
 
       return deepFreeze({
         ...state,
@@ -36,7 +36,7 @@ export default function(state = initialState, action) {
     }
 
     case types.FETCH_PROFILES: {
-      const profiles = [ ...action.payload.data.data ]
+      const profiles = [ ...action.payload.data ]
 
       return deepFreeze({
         ...state,
@@ -45,7 +45,7 @@ export default function(state = initialState, action) {
     }
 
     case types.FETCH_SORTERS: {
-      const sorters = [ ...action.payload.data.data ]
+      const sorters = [ ...action.payload.data ]
 
       return deepFreeze({
         ...state,
