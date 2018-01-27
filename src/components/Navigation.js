@@ -51,6 +51,11 @@ export default class Navigation extends Component {
           </i>
         )}
         <div className="navigation-content">
+          <div className="navigation-overlay" onClick={() => {
+            this.setState({
+              navigationVisible: !this.state.navigationVisible
+            })
+          }} />
           <Filters />
           <Profiles />
           <Sorters />
