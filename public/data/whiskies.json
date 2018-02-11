@@ -1,10 +1,110 @@
 [
   {
+    "age":16,
+    "brand":"Jura",
+    "price":82,
+    "event_number":35,
+    "event_date":"02/09/2018",
+    "id":"jura-16-year-old",
+    "image_url":"",
+    "name":"Jura 16 Year Old - Diurachs' Own",
+    "origin":"Scotland",
+    "type":"Scotch",
+    "url":"http://us.jurawhisky.com/our-whisky/",
+    "description":"With the smoothness of the 10 year-old allied to extra complexity from more ageing, this is a winner",
+    "ratings":[
+      {
+        "name":"Bryan Peterson",
+        "score":80
+      },
+      {
+        "name":"Isaac Oster",
+        "score":60
+      },
+      {
+        "name":"Jason Smith",
+        "score":60
+      },
+      {
+        "name":"Kevin Nayar",
+        "score":60
+      },
+      {
+        "name":"Liam Wiles",
+        "score":70
+      },
+      {
+        "name":"Oscar Aparicio",
+        "score":60
+      },
+            {
+        "name":"Will Semons",
+        "score":60
+      }
+    ],
+    "profiles":[
+      "Malty",
+      "Spicy",
+      "Sweet"
+    ],
+    "average_rating":64
+  },
+  {
+    "age":18,
+    "brand":"Talisker",
+    "price":158,
+    "event_number":35,
+    "event_date":"02/09/2018",
+    "id":"talisker-18-year-old",
+    "image_url":"",
+    "name":"Talisker 18 Year Old",
+    "origin":"Scotland",
+    "type":"Scotch",
+    "url":"https://www.malts.com/en-gb/our-whisky-collection/talisker/",
+    "description":"Stunning balance of peat, spice and sweetness.",
+    "ratings":[
+      {
+        "name":"Bryan Peterson",
+        "score":100
+      },
+      {
+        "name":"Isaac Oster",
+        "score":90
+      },
+      {
+        "name":"Jason Smith",
+        "score":90
+      },
+      {
+        "name":"Kevin Nayar",
+        "score":100
+      },
+      {
+        "name":"Liam Wiles",
+        "score":100
+      },
+      {
+        "name":"Oscar Aparicio",
+        "score":90
+      },
+            {
+        "name":"Will Semons",
+        "score":90
+      }
+    ],
+    "profiles":[
+      "Smokey",
+      "Spicy",
+      "Sweet"
+    ],
+    "average_rating":94
+  },
+  {
     "age":3,
     "brand":"Willet",
     "price":46,
     "event_number":34,
-    "event_date":"01/12/20178",
+    "event_date":"01/12/2018",
     "id":"willet-family-estate-bottled-rye",
     "image_url":"willet-family-estate-bottled-rye.jpg",
     "name":"Family Estate Bottled Rye",
@@ -55,7 +155,7 @@
     "brand":"Pikesville",
     "price":43,
     "event_number":34,
-    "event_date":"01/12/20178",
+    "event_date":"01/12/2018",
     "id":"pikesville-straight-rye-whiskey",
     "image_url":"pikesville-straight-rye-whiskey.jpg",
     "name":"Straight Rye Whiskey",
